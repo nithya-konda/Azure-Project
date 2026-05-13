@@ -1,0 +1,15 @@
+{
+	"name": "DF-AzureProject-nit",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Enabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "77bb731d-adf5-4c74-9171-3b2045d35afb",
+		"tenantId": "03014579-700a-4a89-bf92-95ca14660023"
+	}
+}
