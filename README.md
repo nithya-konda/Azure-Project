@@ -1,8 +1,8 @@
 # Azure-Project
 
-#End-to-End Spotify Data Engineering Pipeline using Azure Data Factory, Databricks Medallion Architecture, ADLS Gen2, and Power BI
+# End-to-End Spotify Data Engineering Pipeline using Azure Data Factory, Databricks Medallion Architecture, ADLS Gen2, and Power BI
 
-##Project Overview
+## Project Overview
 
 This project demonstrates an end-to-end modern data engineering pipeline built using Microsoft Azure services, Databricks Medallion Architecture, and Power BI.
 
@@ -19,7 +19,7 @@ Dashboard analytics
 Cloud integration
 GitHub version control
 
-##Architecture
+## Architecture
 Source Files
      ↓
 Azure Data Factory
@@ -35,8 +35,8 @@ Star Schema Warehouse Model
 Power BI Dashboard
 
 
-##Tech Stack
-###Cloud & Storage
+## Tech Stack
+### Cloud & Storage
 Microsoft Azure
 Azure Data Lake Storage Gen2 (ADLS Gen2)
 ###Data Engineering
@@ -45,13 +45,13 @@ Azure Databricks
 PySpark
 SQL
 Databricks Asset Bundles (DAB)
-###Analytics & Visualization
+### Analytics & Visualization
 Power BI
-###Version Control
+### Version Control
 GitHub
 
-##Project Workflow
-###1. Data Ingestion using Azure Data Factory
+## Project Workflow
+### Data Ingestion using Azure Data Factory
 
 Azure Data Factory was used to orchestrate and ingest source data into the Bronze Layer stored in Azure Data Lake Storage Gen2.
 
@@ -62,15 +62,15 @@ Built ingestion pipelines
 Connected source to ADLS Gen2
 Automated raw data movement
 
-###Medallion Architecture
+### Medallion Architecture
 
 The project follows the Medallion Architecture pattern:
 
-###Bronze Layer
+### Bronze Layer
 
 The Bronze Layer stores raw ingested data exactly as received from the source.
 
-####Characteristics:
+#### Characteristics:
 Raw data
 No transformations
 Historical ingestion storage
@@ -78,17 +78,17 @@ Source of truth
 Supports incremental data ingestion
 Supports backfilling for historical data recovery and reprocessing
 
-####Pipeline Capabilities:
+#### Pipeline Capabilities:
 Incremental loading using Azure Data Factory
 Historical backfill support for missed or delayed records
 Automated ingestion workflows into ADLS Gen2 Bronze storage
 Scalable ingestion architecture for future data growth
 
-###Silver Layer
+### Silver Layer
 
 The Silver Layer contains cleaned and transformed data.
 
-####Transformations Performed:
+#### Transformations Performed:
 Null handling
 Column formatting
 Standardization
@@ -96,44 +96,40 @@ Deduplication
 Data quality improvements
 Schema refinement
 
-####Technologies Used:
+#### Technologies Used:
 PySpark
 Databricks DataFrames
 
-###Gold Layer
+### Gold Layer
 
 The Gold Layer contains business-ready analytical tables optimized for reporting and dashboarding.
 
-####Features:
+#### Features:
 Star schema modeling
 Fact and dimension tables
 KPI-ready data
 Optimized for BI tools
 
-###Data Warehouse Model
+### Data Warehouse Model
 
 The Gold Layer was modeled into a Star Schema warehouse structure.
 
-####Fact Table
+#### Fact Table
 FactStream
 
 Contains streaming activity and transactional metrics.
 
-####Dimension Tables
+#### Dimension Tables
 DimUser
-
 Contains user information.
 
 DimArtist
-
 Contains artist-related information.
 
 DimTrack
-
 Contains track-level metadata.
 
 DimDate
-
 Contains date and time analytics attributes.
 
 Star Schema Relationship
@@ -142,19 +138,19 @@ Star Schema Relationship
                     |
 DimDate ---- FactStream ---- DimTrack ---- DimArtist
 
-##Power BI Dashboard
+## Power BI Dashboard
 
 An interactive Power BI dashboard was developed using the Gold Layer analytical tables.
 
-###Dashboard Features
+### Dashboard Features
 
-####Executive KPIs
+#### Executive KPIs
 Total Users
 Total Streams
 Average Listen Duration
 Total Tracks
 
-####Analytics Visuals
+#### Analytics Visuals
 Streaming Trends Over Time
 User Subscription Distribution
 Streaming Activity by Device Type
@@ -162,13 +158,13 @@ Top 10 Countries by Active Users
 Top 10 Most Streamed Tracks
 Top 10 Most Streamed Artists
 
-####Interactive Slicers
+#### Interactive Slicers
 Country
 Subscription Type
 Device Type
 Date Filters
 
-###Business Insights Generated
+### Business Insights Generated
 
 The dashboard helps answer business questions such as:
 
@@ -178,7 +174,7 @@ Which artists and tracks are most popular?
 What devices are most commonly used?
 How does streaming activity change over time?
 
-##Key Features of the Project
+## Key Features of the Project
 Built an end-to-end Azure data engineering pipeline
 Implemented Medallion Architecture using Databricks
 Created Bronze, Silver, and Gold layers
@@ -189,24 +185,31 @@ Integrated Azure Data Factory with ADLS Gen2
 Used Databricks Asset Bundles for project organization
 Maintained project using GitHub version control
 
-###Repository Contents
+### Repository Contents
 
 adf/
+
 ├── dataset/
+
 ├── linkedService/
+
 ├── pipeline/
+
 Databricks notebooks and bundle configurations (in spotify_dab)
+
 Power BI dashboard files
+
 Architecture diagrams
+
 README documentation
 
-##Dashboard Preview
+## Dashboard Preview
 <img width="1337" height="751" alt="image" src="https://github.com/user-attachments/assets/fcc9b281-efd6-4b10-9ca2-61d423376ffc" />
 
-##Architecture or dataflow
+## Architecture or dataflow
 <img width="937" height="576" alt="image" src="https://github.com/user-attachments/assets/20d0b868-9a4c-4403-b45f-f2f271951450" />
 
-##Learning Outcomes
+## Learning Outcomes
 
 This project helped strengthen practical skills in:
 
@@ -220,7 +223,7 @@ Power BI analytics
 GitHub project management
 End-to-end analytics architecture
 
-##Conclusion
+## Conclusion
 
 This project demonstrates a complete modern data engineering and analytics workflow using Azure services, Databricks, and Power BI.
 
