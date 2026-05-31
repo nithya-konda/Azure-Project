@@ -21,16 +21,22 @@ GitHub version control
 
 ## Architecture
 Source Files
+
      ↓
 Azure Data Factory
+
      ↓
 ADLS Gen2 Bronze Layer (Raw Data)
+
      ↓
 Databricks Silver Layer (Cleaned & Transformed Data)
+
      ↓
 Databricks Gold Layer (Business-ready Analytical Data)
+
      ↓
 Star Schema Warehouse Model
+
      ↓
 Power BI Dashboard
 
