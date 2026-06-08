@@ -1,4 +1,4 @@
-# Azure-Project
+# Spotify_DataPipeline_AzureProject
 
 # End-to-End Spotify Data Engineering Pipeline using Azure Data Factory, Databricks Medallion Architecture, ADLS Gen2, and Power BI
 
